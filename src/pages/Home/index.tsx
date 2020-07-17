@@ -1,5 +1,5 @@
 import React from 'react';
-import { FiLogin } from 'react-icons/fi';
+import { FiLogIn } from 'react-icons/fi';
 
 import './styles.css'
 
@@ -16,14 +16,15 @@ const Home = () => {
                 <main>
                     <h1>Seu marketplace de coleta de resíduos</h1>
                     <p>Ajudamos pessoas a encontrarem potnos de coleta de forma eficiente</p>
-                </main>
+               
             
                 <a href="/cadastro">
                     <span>
-                        <FiLogin/>
+                        <FiLogIn/>
                     </span>
                     <strong>Cadastre um ponto de coleta</strong>
                 </a>
+                </main>
             </div>
         </div>
     );
