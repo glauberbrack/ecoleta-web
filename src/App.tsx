@@ -1,11 +1,14 @@
 import React from 'react';
 import './App.css';
 
+import Header from './components/Header';
+
 function App() {
   return (
-        <p>
-         Oieee
-        </p>
+    <div>
+      <Header/>
+      <p>oies</p>
+    </div>
   );
 }
 
