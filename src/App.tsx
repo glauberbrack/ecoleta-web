@@ -2,7 +2,6 @@ import React from 'react';
 import './App.css';
 
 import Routes from './routes'
-import Home from './pages/Home';
 
 function App() {
   return (
@@ -12,5 +11,3 @@ function App() {
 
 export default App;
 
-
-// Continuar em 54:16
