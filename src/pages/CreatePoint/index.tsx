@@ -106,22 +106,26 @@ const CreatePoint = () => {
 
     function handleSubmit(event: FormEvent) {
         event.preventDefault();
+
         const { name, email, whatsapp } = formData;
         const uf = selectedUf;
         const city = selectedCity;
         const [ latidude, longitude ] = selectedPosition;
         const items = selectedItems;
 
-        const data = [
-            name,
-            email,
-            whatsapp,
-            uf,
-            city,
-            latidude,
-            longitude,
-            items
-        ]
+        const data = new FormData();
+        data.append('name', name);
+        data.append('email', email);
+        data.append('whatsapp', whatsapp);
+        data.append('uf', uf);
+        data.append('city', city);
+        data.append('lat', String(latidude));
+        data.append('long', String(longitude));
+        data.append('items', items.join(','));
+        
+        if(selectedFile) {
+            data.append('image', selectedFile)
+        }
 
         api.post('points', data);
 
